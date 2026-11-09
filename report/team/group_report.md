@@ -24,9 +24,9 @@
 | 4 | Nguyễn Lâm Tùng | Khi ghép code/báo cáo từ 4 thành viên vào tối trước ngày nộp, nhóm trưởng muốn biết ngay phần nào viết lệch cấu trúc hoặc mâu thuẫn số liệu với phần khác, để kịp yêu cầu sửa trước khi merge | Nhóm trưởng, các thành viên nhóm (4 người) | Đọc dò chéo để phát hiện mâu thuẫn số liệu, logic và thuật ngữ giữa 4 phần viết độc lập (35 phút) | *"Nếu nhóm chia sẵn khung heading trong file template từ đầu buổi thì có còn mất 80 phút ghép bài nữa không, hay chủ yếu mất giờ ở chỗ khác?"* (Dương hỏi) |
 | 5 | Nguyễn Lâm Tùng | Khi chuẩn bị nộp bài lab/báo cáo nhóm trước deadline 23h59, tôi muốn đối chiếu nhanh bài làm với toàn bộ rubric và quy tắc đặt tên file, để không bị trừ điểm oan vì thiếu mục nhỏ | Sinh viên, nhóm trưởng chuẩn bị nộp bài | Dò thủ công từng điều kiện đạt/trừ điểm trong `RUBRIC.md` và `SUBMISSION.md` đối chiếu với bài làm (15 phút) | *"Phần kiểm tra tên file và số dòng này chỉ cần lập Checklist hoặc chạy script/linter (Rule) là đủ, có thực sự cần tới AI không?"* (Thành viên 3 hỏi) |
 | 6 | Nguyễn Lâm Tùng | Khi giảng viên hoặc TA giải đáp thắc mắc rải rác trong Zalo/Discord lớp suốt nhiều tuần, tôi muốn tìm lại ngay câu trả lời chính thức cho lỗi mình đang gặp, để không mất công hỏi lại hoặc làm sai hướng | Sinh viên trong lớp, Trợ giảng (TA) | Cuộn đọc ngược qua >500 tin nhắn thảo luận để tìm đúng câu chốt của giảng viên/TA (10 phút) | *"Nếu TA hoặc lớp trưởng chỉ cần ghim (Pin) tin nhắn giải đáp vào một file Google Docs FAQ chung (No AI) thì đã giải quyết được 80% vấn đề chưa?"* (Thành viên 4 hỏi) |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
+| 7 | Đỗ Duy Tùng | Khi đến giờ họp daily standup lúc 9h sáng, tôi muốn tổng hợp nhanh commit, ticket Jira và ghi chú hôm qua, để báo cáo trong 2 phút mà không phải lục lọi lịch sử | Kỹ sư phần mềm Agile | Mở 3 công cụ (Git, Jira, Slack) lúc 8h45 để nhớ lại việc hôm qua, mất 15–20' | Viết script regex lấy log Git là xong, sao cần AI? (Thành viên 2) |
+| 8 | Đỗ Duy Tùng | Khi nhận tài liệu đặc tả nghiệp vụ GovTech có nhiều quy định mập mờ, tôi muốn phát hiện sớm các kịch bản ngoại lệ (edge cases) và mâu thuẫn logic, để gửi danh sách câu hỏi làm rõ cho khách hàng | Kỹ sư GovTech / BA | Tự tìm kịch bản ngoại lệ và đối chiếu mâu thuẫn quy định thủ công, mất 105' | Nghiệp vụ nhà nước có tính bảo mật cao, đưa vào AI xử lý có vi phạm chính sách dữ liệu không? (Thành viên 1) |
+| 9 | Đỗ Duy Tùng | Khi đọc tài liệu kỹ thuật API và thư viện AI mới bằng tiếng Anh chuyên ngành, tôi muốn nắm đúng bản chất khái niệm cốt lõi bằng tiếng Việt chuyên môn, để áp dụng vào code mà không phải mất cả buổi tra từ điển | Kỹ sư học AI | Đọc bản dịch thô và thử sai do hiểu nhầm tài liệu kỹ thuật, mất 75' | Google Dịch và Claude/ChatGPT đã dịch được rồi, nhóm định làm gì khác biệt? (Thành viên 4) |
 | 10 | | | | | |
 | 11 | | | | | |
 | 12 | | | | | |
@@ -141,37 +141,108 @@ Tổng hợp:
 
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 
-```text
+![Sơ đồ quy trình hiện tại](../assets/current_process.svg)
 
+```mermaid
+flowchart TD
+    A["1. Gom bài 4 thành viên từ Git / Docs<br/>(10 phút - Nhóm trưởng)"] --> B["2. Ghép nội dung vào file báo cáo chung<br/>(5 phút - Nhóm trưởng)"]
+    B --> C["3. Mở đề bài & RUBRIC.md đối chiếu<br/>(5 phút - Nhóm trưởng)"]
+    C --> D["4. Đọc chéo đối chiếu Rubric & tìm mâu thuẫn số liệu<br/>(35–40 phút - BOTTLENECK CHÍNH)"]
+    D --> E["5. Nhắn tin nhóm chat & chờ thành viên sửa<br/>(15 phút - Cả nhóm)"]
+    E --> F["6. Format bảng Markdown & kiểm tra tên file<br/>(5 phút - Nhóm trưởng)"]
+    F --> G["7. Commit GitHub & nộp link LMS lúc 23h30<br/>(5 phút - Hoàn thành)"]
+
+    style D fill:#fee2e2,stroke:#ef4444,stroke-width:3px,color:#991b1b
+    style G fill:#dcfce7,stroke:#22c55e,stroke-width:2px,color:#166534
+```
+
+```text
+HIỆN TẠI — Tổng thời gian: ~80 phút
+
+[1. Gom bài 4 thành viên từ các nhánh Git: 10']
+    ↓
+[2. Ghép nội dung vào file báo cáo chung: 5']
+    ↓
+[3. Mở file đề bài & Rubric chấm điểm: 5']
+    ↓
+[4. Đọc chéo đối chiếu Rubric & tìm mâu thuẫn số liệu: 35'] ← BOTTLENECK CHÍNH (hoa mắt, mệt mỏi)
+    ↓
+[5. Nhắn tin nhóm & chờ thành viên sửa lại: 15']
+    ↓
+[6. Chỉnh format Markdown & kiểm tra tên file: 5']
+    ↓
+[7. Commit, push và nộp bài lên LMS: 5']
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Nhóm trưởng | 4 file nháp / nhánh Git của thành viên | Thư mục chứa bài làm thô | 10 phút / lần nộp | Phải nhắc nhở các bạn push bài đúng hạn |
+| 2 | Nhóm trưởng | Bài làm thô | File báo cáo ghép nối sơ bộ | 5 phút / lần nộp | Copy paste thủ công các mục |
+| 3 | Nhóm trưởng | File đề bài, `RUBRIC.md` | Bảng tiêu chí đối chiếu | 5 phút / lần nộp | Đọc lướt thang điểm 100 |
+| 4 | Nhóm trưởng | File báo cáo ghép + Rubric | Ghi chú các chỗ thiếu và mâu thuẫn | 35–40 phút / lần nộp | **Bottleneck:** Bài dài 10–15 trang, đọc hoa mắt lúc 22h, rất dễ sót tiêu chí con |
+| 5 | Cả nhóm | Ghi chú lỗi từ nhóm trưởng | Các đoạn văn bản đã sửa | 15 phút / lần nộp | Trao đổi qua lại trong nhóm chat, gây sốt ruột sát deadline |
+| 6 | Nhóm trưởng | Báo cáo đã sửa | File hoàn chỉnh đúng chuẩn | 5 phút / lần nộp | Sửa format bảng, link ảnh, tên file |
+| 7 | Nhóm trưởng | File báo cáo hoàn chỉnh | Commit trên GitHub + link nộp LMS | 5 phút / lần nộp | Nộp bài trong trạng thái kiệt sức |
 
-**Bottleneck chính:**
+**Bottleneck chính:** Bước 4 — Nhóm trưởng phải tự mình đọc chéo toàn bộ bài viết dài của 4 người, vừa đối chiếu từng dòng tiêu chí trong Rubric (đủ baseline chưa, có boundary chưa, có fallback chưa), vừa phải căng não nhớ xem số liệu ở mục 2 có khớp với bảng mục 4 và 6 hay không. Bước này tốn 35–40 phút và là nguyên nhân chính dẫn đến việc bị trừ điểm oan.
 
 ### 4.2. Quy trình tương lai
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
-```text
+![Sơ đồ quy trình tương lai](../assets/future_process.svg)
 
+```mermaid
+flowchart TD
+    A["Bước 1 (RULE): Script tự ghép file & lint format<br/>(2 phút - Tự động)"] --> B["Bước 2 (AI): LLM đối soát Rubric & tìm mâu thuẫn số liệu<br/>(3 phút - AI Workflow)"]
+    B --> C["Bước 3 (CON NGƯỜI): Lead đọc cảnh báo & tag thành viên<br/>(10 phút - Human-in-the-loop)"]
+    C --> D["Bước 4 (CON NGƯỜI): Thành viên sửa nhanh 1-2 vị trí lệch<br/>(5 phút - Con người)"]
+    D --> E["Bước 5 (NGƯỜI + RULE): Re-check nhanh, commit & nộp LMS<br/>(5 phút - Hoàn thành)"]
+
+    style A fill:#eff6ff,stroke:#3b82f6,stroke-width:2px,color:#1e40af
+    style B fill:#faf5ff,stroke:#a855f7,stroke-width:2px,color:#6b21a8
+    style C fill:#fffbeb,stroke:#f59e0b,stroke-width:2px,color:#92400e
+    style E fill:#ecfdf5,stroke:#10b981,stroke-width:2px,color:#065f46
 ```
+
+```text
+TƯƠNG LAI — Tổng thời gian: 25 phút
+
+[Bước 1 (RULE): Script tự động ghép file & linter check cấu trúc mục, tên file: 2 phút]
+    ↓
+[Bước 2 (AI): LLM đối soát toàn văn với Rubric & trích xuất mâu thuẫn số liệu: 3 phút]
+    ↓
+[Bước 3 (CON NGƯỜI): Nhóm trưởng đọc bản cảnh báo, gửi tag thành viên sửa đúng chỗ lệch: 10 phút] ← HITL
+    ↓
+[Bước 4 (CON NGƯỜI): Thành viên sửa nhanh đoạn lệch và push lại: 5 phút]
+    ↓
+[Bước 5 (CON NGƯỜI + RULE): Re-check nhanh, commit và nộp link LMS: 5 phút]
+```
+
+- **Bước 1 (Rule-based):** Script Git/Bash tự động ghép các file báo cáo thành viên vào file tổng hợp; chạy linter kiểm tra cú pháp Markdown, link ảnh assets và quy tắc đặt tên file/repo theo chuẩn `SUBMISSION.md`. (Máy tự động, 2 phút).
+- **Bước 2 (AI Workflow):** File báo cáo tổng hợp và file `RUBRIC.md` được nạp vào mô hình LLM thông qua một prompt đánh giá đối chiếu định sẵn. AI thực hiện 2 nhiệm vụ:
+  1. *Compliance Check:* Rà soát từng tiêu chí trong Rubric, đánh dấu [Đạt] hoặc [Thiếu] (kèm trích dẫn mục còn thiếu thông tin bắt buộc, ví dụ: "Mục 4.2 thiếu phương án quay về").
+  2. *Consistency Check:* So sánh chéo các cặp số liệu và thuật ngữ giữa các mục (ví dụ: "Số phút bottleneck ở CP2 ghi 20', nhưng ở CP5 ghi 15'").
+  Kết quả xuất ra một file `review_report.md` dạng checklist cảnh báo (Máy tự động, 3 phút).
+- **Bước 3 (Con người kiểm tra - Human-in-the-loop):** Nhóm trưởng mở file cảnh báo, chỉ mất 3–5 phút đọc lướt các điểm highlight đỏ, sau đó tag trực tiếp bạn phụ trách mục đó vào nhóm chat kèm trích dẫn lỗi để sửa (10 phút).
+- **Bước 4 (Con người sửa bài):** Thành viên liên quan chỉnh sửa lại đúng 1–2 đoạn văn bị lệch, đảm bảo trách nhiệm cá nhân (5 phút).
+- **Bước 5 (Nộp bài):** Nhóm trưởng chạy lại script kiểm tra lần cuối, commit và nộp link lên LMS trước deadline 30 phút (5 phút).
+- **Boundary:**
+  - AI **tuyệt đối không** được tự động viết lại nội dung bài báo cáo hoặc tự ý sửa số liệu trong file markdown gốc.
+  - AI **không** tự động nộp bài lên LMS.
+  - Quyết định sửa thế nào hoàn toàn thuộc về con người (kỹ sư/sinh viên viết phần đó).
+- **Phương án quay về (Fallback):** Nếu API của AI gặp sự cố mạng hoặc timeout, nhóm lập tức quay về quy trình bán thủ công: sử dụng kết quả kiểm tra cấu trúc của Bước 1 (Rule-based) và nhóm trưởng mở checklist Rubric dạng bảng để dò mắt như cũ.
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 7 bước | 5 bước | Tự động hóa khâu gom file và khâu dò tìm lỗi |
+| Tổng thời gian | ~80 phút / lần nộp | ~25 phút / lần nộp | Giảm gần 70% thời gian tổng hợp và review |
+| Thời gian khâu bottleneck | 35–40 phút đọc dò mắt | 3 phút AI scan + 10 phút người rà soát cảnh báo | Giảm tải áp lực nhận thức cho nhóm trưởng |
+| Số bước thủ công nặng | 4 bước thủ công mệt mỏi | 2 bước rà soát và sửa đúng trọng tâm | Không còn tình trạng đọc đi đọc lại 15 trang bài |
+| Tỷ lệ sót lỗi Rubric | 2–3 lỗi/bài (bị trừ 3–5 điểm) | 0 lỗi vi phạm cấu trúc và thiếu trường Rubric | Đảm bảo đạt trọn vẹn điểm checklist |
+| Rủi ro mới phát sinh | Hoa mắt bỏ sót lỗi, mâu thuẫn nội dung | AI có thể cảnh báo nhầm (false alarm) về một câu văn diễn đạt khác | Người dùng dễ dàng bỏ qua cảnh báo nếu thấy hợp lý |
 
 ---
 
@@ -179,16 +250,23 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Nhóm trưởng hoặc thành viên phụ trách tổng hợp và review bài nộp cuối của nhóm học viên/sinh viên (3–5 người) |
+| **Quy trình** | Tối trước deadline (20h–23h30), thu thập bài viết của 4 thành viên, ghép vào file báo cáo chung, mở Rubric đề bài để đọc chéo đối chiếu tiêu chí và tìm mâu thuẫn số liệu, sau đó yêu cầu sửa và nộp bài |
+| **Bottleneck** | Khâu đọc chéo toàn bộ bài báo cáo dài 10–15 trang để đối chiếu từng tiêu chí trong Rubric và rà soát mâu thuẫn số liệu/thuật ngữ giữa các phần ghép nối (mất 35–40 phút, hoa mắt và dễ bỏ sót khi mệt mỏi sát giờ nộp) |
+| **Impact** | Tốn 75–90 phút cho mỗi lần nộp bài; nhóm trưởng bị quá tải nhận thức; 2/5 bài nộp gần nhất vẫn bị sót trường thông tin bắt buộc hoặc số liệu phần kết luận lệch với phần phân tích, dẫn đến bị trừ 3–5 điểm oan |
+| **Success Metric** | Giảm tổng thời gian tổng hợp & review từ ~80 phút xuống dưới 30 phút/lần nộp; giảm số lỗi thiếu mục/sai format theo rubric từ 2–3 lỗi về 0 lỗi; tỷ lệ phát hiện mâu thuẫn số liệu trước khi nộp đạt ít nhất 90% |
+| **Boundary** | AI chỉ đóng vai trò phân tích và xuất báo cáo cảnh báo (warning list kèm trích dẫn); AI tuyệt đối không tự ý sửa đè vào file văn bản gốc của nhóm; con người là người thẩm tra và trực tiếp sửa bài |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
+- *Phản biện 1:* AI chỉ ra rằng nếu Rubric chấm điểm của giảng viên quá mơ hồ (ví dụ: "lập luận thuyết phục", "sáng tạo") thì AI sẽ không thể đánh giá đạt/không đạt một cách chuẩn xác.
+  - *Nhóm đồng ý:* Nhóm xác định phạm vi của công cụ tập trung vào các **tiêu chí định lượng và cấu trúc bắt buộc** (đủ các trường, có baseline/target, có boundary, có fallback, số liệu thống nhất) – đây là những chỗ sinh viên hay bị trừ điểm oan nhất. Đối với các tiêu chí định tính, AI chỉ đưa ra gợi ý tham khảo.
+- *Phản biện 2:* Nếu các thành viên dùng các từ đồng nghĩa khác nhau (ví dụ: "thời gian trễ", "latency", "delay") thì AI có thể báo nhầm là mâu thuẫn thuật ngữ.
+  - *Nhóm đồng ý:* Thiết kế prompt cần hướng dẫn AI phân biệt giữa việc dùng từ đồng nghĩa tự nhiên và việc mâu thuẫn về mặt logic giá trị (ví dụ: số liệu 60 phút vs 90 phút).
 
--
+- _Phản biện 1:_ AI chỉ ra rằng nếu Rubric chấm điểm của giảng viên quá mơ hồ (ví dụ: "lập luận thuyết phục", "sáng tạo") thì AI sẽ không thể đánh giá đạt/không đạt một cách chuẩn xác.
+  - _Nhóm đồng ý:_ Nhóm xác định phạm vi của công cụ tập trung vào các **tiêu chí định lượng và cấu trúc bắt buộc** (đủ các trường, có baseline/target, có boundary, có fallback, số liệu thống nhất) – đây là những chỗ sinh viên hay bị trừ điểm oan nhất. Đối với các tiêu chí định tính, AI chỉ đưa ra gợi ý tham khảo.
+- _Phản biện 2:_ Nếu các thành viên dùng các từ đồng nghĩa khác nhau (ví dụ: "thời gian trễ", "latency", "delay") thì AI có thể báo nhầm là mâu thuẫn thuật ngữ.
+  - _Nhóm đồng ý:_ Thiết kế prompt cần hướng dẫn AI phân biệt giữa việc dùng từ đồng nghĩa tự nhiên và việc mâu thuẫn về mặt logic giá trị (ví dụ: số liệu 60 phút vs 90 phút).
 
 ---
 

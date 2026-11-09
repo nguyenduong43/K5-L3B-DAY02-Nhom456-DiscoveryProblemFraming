@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 22px; fill: #1e293b; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14px; fill: #64748b; }
+      .node-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 15px; fill: #0f172a; }
+      .node-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #475569; }
+      .time-badge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 12px; fill: #ffffff; }
+      .role-tag { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 11px; }
+      .arrow { stroke: #94a3b8; stroke-width: 2.5; fill: none; stroke-linecap: round; }
+      .arrow-head { fill: #94a3b8; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" class="arrow-head" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="580" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Header -->
+  <text x="50" y="50" class="title">Quy trình tương lai — Hỗ trợ rà soát đối chiếu bằng AI Workflow</text>
+  <text x="50" y="75" class="subtitle">Tổng thời gian: 25 phút (Giảm ~70% so với trước) | Mô hình: Rule + AI Workflow + Human-in-the-loop</text>
+
+  <!-- 5 Steps Flowchart horizontally / connected -->
+  <!-- Step 1: Rule -->
+  <g transform="translate(50, 110)">
+    <rect width="165" height="175" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)" />
+    <rect x="0" y="0" width="165" height="32" rx="12" fill="#3b82f6" />
+    <rect x="0" y="20" width="165" height="12" fill="#3b82f6" />
+    <text x="12" y="22" class="time-badge">BƯỚC 1 · 2 PHÚT</text>
+    <text x="12" y="58" class="role-tag" fill="#2563eb">MÁY: RULE-BASED</text>
+    <text x="12" y="80" class="node-title">Ghép file &amp; Lint</text>
+    <text x="12" y="105" class="node-desc">Script tự ghép file,</text>
+    <text x="12" y="125" class="node-desc">check heading &amp; tên</text>
+    <text x="12" y="145" class="node-desc">file/repo theo rubric.</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="215" y1="197" x2="240" y2="197" class="arrow" marker-end="url(#arrowhead)" />
+
+  <!-- Step 2: AI Workflow -->
+  <g transform="translate(245, 110)">
+    <rect width="170" height="175" rx="12" fill="#faf5ff" stroke="#a855f7" stroke-width="2" filter="url(#shadow)" />
+    <rect x="0" y="0" width="170" height="32" rx="12" fill="#a855f7" />
+    <rect x="0" y="20" width="170" height="12" fill="#a855f7" />
+    <text x="12" y="22" class="time-badge">BƯỚC 2 · 3 PHÚT</text>
+    <text x="12" y="58" class="role-tag" fill="#7e22ce">MÁY: AI WORKFLOW</text>
+    <text x="12" y="80" class="node-title">Soát Rubric &amp; Lệch</text>
+    <text x="12" y="105" class="node-desc">LLM đối soát rubric,</text>
+    <text x="12" y="125" class="node-desc">bắt mâu thuẫn số liệu</text>
+    <text x="12" y="145" class="node-desc">sinh review_report.md.</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="415" y1="197" x2="440" y2="197" class="arrow" marker-end="url(#arrowhead)" />
+
+  <!-- Step 3: Human HITL -->
+  <g transform="translate(445, 110)">
+    <rect width="170" height="175" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)" />
+    <rect x="0" y="0" width="170" height="32" rx="12" fill="#f59e0b" />
+    <rect x="0" y="20" width="170" height="12" fill="#f59e0b" />
+    <text x="12" y="22" class="time-badge">BƯỚC 3 · 10 PHÚT</text>
+    <text x="12" y="58" class="role-tag" fill="#d97706">CON NGƯỜI (HITL)</text>
+    <text x="12" y="80" class="node-title">Xem cảnh báo &amp; Tag</text>
+    <text x="12" y="105" class="node-desc">Lead đọc báo cáo cảnh</text>
+    <text x="12" y="125" class="node-desc">báo, tag đúng người</text>
+    <text x="12" y="145" class="node-desc">yêu cầu chỉnh sửa.</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <line x1="615" y1="197" x2="640" y2="197" class="arrow" marker-end="url(#arrowhead)" />
+
+  <!-- Step 4: Member edit -->
+  <g transform="translate(645, 110)">
+    <rect width="150" height="175" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+    <rect x="0" y="0" width="150" height="32" rx="12" fill="#64748b" />
+    <rect x="0" y="20" width="150" height="12" fill="#64748b" />
+    <text x="12" y="22" class="time-badge">BƯỚC 4 · 5 PHÚT</text>
+    <text x="12" y="58" class="role-tag" fill="#475569">CON NGƯỜI</text>
+    <text x="12" y="80" class="node-title">Thành viên sửa</text>
+    <text x="12" y="105" class="node-desc">Chỉ cần sửa đúng</text>
+    <text x="12" y="125" class="node-desc">1–2 vị trí bị lệch</text>
+    <text x="12" y="145" class="node-desc">rồi commit lại.</text>
+  </g>
+
+  <!-- Arrow 4 -> 5 -->
+  <line x1="795" y1="197" x2="820" y2="197" class="arrow" marker-end="url(#arrowhead)" />
+
+  <!-- Step 5: Finalize -->
+  <g transform="translate(825, 110)">
+    <rect width="130" height="175" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadow)" />
+    <rect x="0" y="0" width="130" height="32" rx="12" fill="#16a34a" />
+    <rect x="0" y="20" width="130" height="12" fill="#16a34a" />
+    <text x="10" y="22" class="time-badge">BƯỚC 5 · 5'</text>
+    <text x="12" y="58" class="role-tag" fill="#16a34a">NGƯỜI + RULE</text>
+    <text x="12" y="80" class="node-title">Nộp LMS</text>
+    <text x="12" y="105" class="node-desc">Re-check 10s,</text>
+    <text x="12" y="125" class="node-desc">push Git &amp; nộp</text>
+    <text x="12" y="145" class="node-desc">trước hạn 30'.</text>
+  </g>
+
+  <!-- Boundary & Fallback Section -->
+  <g transform="translate(50, 315)">
+    <!-- Boundary Box -->
+    <rect width="435" height="145" rx="12" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" />
+    <text x="20" y="32" style="font-family: -apple-system, sans-serif; font-weight:700; font-size:15px; fill:#be123c;">🚫 Ranh giới nghiêm ngặt (Boundary):</text>
+    <text x="20" y="60" class="node-desc">• AI <tspan font-weight="700">tuyệt đối không tự sửa văn bản</tspan> hay sửa đè số liệu.</text>
+    <text x="20" y="85" class="node-desc">• AI <tspan font-weight="700">không tự động nộp bài</tspan> lên LMS.</text>
+    <text x="20" y="110" class="node-desc">• Quyết định sửa thuộc về con người (đảm bảo tính liêm chính).</text>
+  </g>
+
+  <g transform="translate(515, 315)">
+    <!-- Fallback Box -->
+    <rect width="440" height="145" rx="12" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" />
+    <text x="20" y="32" style="font-family: -apple-system, sans-serif; font-weight:700; font-size:15px; fill:#334155;">🔄 Phương án quay về (Fallback):</text>
+    <text x="20" y="60" class="node-desc">• Nếu API AI timeout hoặc lỗi mạng:</text>
+    <text x="20" y="85" class="node-desc">• Vẫn giữ file đã ghép từ Bước 1 (Rule-based).</text>
+    <text x="20" y="110" class="node-desc">• Nhóm trưởng dùng checklist Markdown thủ công để dò mắt như cũ.</text>
+  </g>
+
+  <!-- Summary Box -->
+  <rect x="50" y="480" width="905" height="60" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5" />
+  <text x="70" y="515" style="font-family: -apple-system, sans-serif; font-size: 15px; fill: #065f46; font-weight: 600;">
+    Kết quả: Thời gian tổng hợp giảm từ 80' xuống 25' (tiết kiệm 55 phút/lần nộp) · Tỷ lệ sót lỗi Rubric về 0 lỗi.
+  </text>
+</svg>
+

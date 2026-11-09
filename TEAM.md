@@ -12,7 +12,7 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | | | | |
+| 1 | Nguyễn Tùng Dương| 2A202603850| Leader| nguyenduong43|
 | 2 | Nguyễn Lâm Tùng | 202603854 | Phụ trách CP4 — Kiểm chứng (The Mom Test) & Research | |
 | 3 | Đỗ Duy Tùng | 2A202603844 | Phụ trách CP5 — Quy trình Before/After & Problem Statement v0 | Presceltooo |
 | 4 | | | | |

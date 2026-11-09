@@ -12,7 +12,7 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | Nguyễn Tùng Dương| 2A202603850| Leader| nguyenduong43|
+| 1 | Nguyễn Tùng Dương| 2A202603850| Leader & Phụ trách CP3-Hội tụ nhóm | nguyenduong43|
 | 2 | Nguyễn Lâm Tùng | 202603854 | Phụ trách CP4 — Kiểm chứng (The Mom Test) & Research | |
 | 3 | Đỗ Duy Tùng | 2A202603844 | Phụ trách CP5 — Quy trình Before/After & Problem Statement v0 | Presceltooo |
 | 4 | | | | |
@@ -25,11 +25,11 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
-| CP3 — Hội tụ nhóm | | | Cluster, cây OST, bảng chấm điểm |
+| CP3 — Hội tụ nhóm | Nguyễn Tùng Dương | Cả nhóm | Cluster, cây OST, bảng chấm điểm |
 | CP4 — Kiểm chứng | Nguyễn Lâm Tùng | Đỗ Duy Tùng | Assumption map, snapshot hoặc survey |
 | CP4 — Research | Nguyễn Lâm Tùng | Đỗ Duy Tùng | Bảng research có link |
-| CP5 — Quy trình trước/sau |Đỗ Duy Tùng | Cả nhóm| Quy trình + bảng before/after |
-| CP5 — Problem Statement v0 |Đỗ Duy Tùng | Cả nhóm| Problem Statement v0 |
+| CP5 — Quy trình trước/sau | Đỗ Duy Tùng | Cả nhóm | Quy trình + bảng before/after |
+| CP5 — Problem Statement v0 | Đỗ Duy Tùng | Cả nhóm | Problem Statement v0 |
 | CP6 — Mức can thiệp + Problem Statement v1 | | | Ma trận, AI Canvas, eval, Problem Statement v1 |
 | CP6 — Quyết định | | | 4 rủi ro + Go/Not Yet/No-Go |
 
@@ -37,7 +37,36 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
-### NguyenLamTung-202603854
+### NguyenTungDuong-2A202603850
+
+**Phần việc phụ trách:**
+
+- Nhóm trưởng (Leader): khởi tạo repo nhóm, phân công các checkpoint (CP3 → CP6), điều phối ghép bài và rà soát tổng thể báo cáo nhóm trước khi nộp.
+- Phụ trách chính **CP3 — Hội tụ nhóm** (Mục 1 và toàn bộ Mục 2: 2.1 Pitch, 2.2 Cluster, 2.3 Cây OST rút gọn, 2.4 Bảng chấm điểm shortlist & chốt phương án trong `report/team/group_report.md`).
+- Đóng góp ý tưởng bài toán chính được cả nhóm lựa chọn (*Ghép và kiểm tra tính nhất quán/rubric của báo cáo nhóm trước deadline*) và cùng nhóm phản biện ranh giới Rule vs. AI ở CP5–CP6.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- **Mục 1 & Mục 2.1 (Pitch — CP3):** Trình bày 3 Problem Cards cá nhân (dòng #1, #2, #3), trong đó Card #1 về nỗi đau của nhóm trưởng khi ghép bài và đọc dò rubric lúc sát giờ nộp được chọn làm bài toán chung của cả nhóm; đặt câu hỏi phản biện giúp loại bỏ các ý tưởng dính lỗi *solution-first*.
+- **Mục 2.2 & 2.3 (Cluster & Cây OST — CP3):** Gom 12 ý tưởng của 4 thành viên về 3 cụm vấn đề rõ ràng (Cluster A, B, C); xây dựng cây Opportunity Solution Tree rút gọn với 1 Outcome đo lường được (`~80 phút` xuống `<30 phút`) và 3 nhánh Opportunity, đồng thời lọc bỏ 3 ý tưởng bị lẫn tên công cụ/giải pháp ra khỏi tầng Opportunity.
+- **Mục 2.4 (Chấm điểm shortlist — CP3):** Cùng nhóm chấm điểm 3 ứng viên đại diện theo 7 tiêu chí, phân tích lý do chọn bài toán *Ghép & kiểm tra tính nhất quán báo cáo nhóm* (35/35 điểm), lý do loại 2 ứng viên còn lại và cách giải quyết bất đồng trong nhóm.
+- **Điều phối & Rà soát repo chung:** Quản lý nhánh, hỗ trợ xử lý xung đột Git (rebase/merge PR) cho các thành viên và kiểm tra cấu trúc bài nộp theo checklist.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- File báo cáo nhóm `report/team/group_report.md`: **Mục 1 (Thông tin nhóm)** và toàn bộ **Mục 2 (2.1 Pitch dòng #1–#3, 2.2 Cluster, 2.3 Cây OST rút gọn, 2.4 Chấm điểm shortlist)**.
+- File quản lý nhóm `TEAM.md`: Bảng thông tin chung, phân công checkpoint và mục cá nhân `NguyenTungDuong-2A202603850`.
+- File báo cáo cá nhân: `report/individual/2A202603850_Nguyễn Tùng Dương.md` (hoàn thiện đầy đủ các mục 1 → 7).
+
+**Điều mình học được từ phần nhóm:**
+
+- Học được cách điều phối nhóm đi từ 12 ý tưởng rời rạc về đúng 1 bài toán cụ thể bằng Cluster và cây OST mà không bị sa đà vào việc bàn giải pháp công nghệ quá sớm.
+- Nhận ra giá trị thực tế của việc phản biện chéo trong nhóm: nhờ câu hỏi của các thành viên ở CP3 và kết quả phỏng vấn ở CP4, bài toán ban đầu của mình đã được tách bạch rất rõ — những lỗi cơ học (sai tên file, thiếu mục, thiếu số từ) chỉ cần giải quyết bằng Checklist + Rule/script là chính xác 100%, còn AI chỉ nên dùng ở đúng bước nghẽn 35 phút là đọc chéo tìm mâu thuẫn số liệu và ngữ nghĩa giữa các phần.
+- Hiểu rõ vai trò của ranh giới kiểm soát (Boundary / Human-in-the-loop): công cụ chỉ đóng vai trò cảnh báo lỗi kèm vị trí dòng, còn quyền quyết định sửa và commit cuối cùng luôn phải thuộc về nhóm trưởng và các thành viên.
+
+---
+
+### NguyenLamTung-2A202603854
 
 **Phần việc phụ trách:**
 

@@ -54,6 +54,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
 - File báo cáo nhóm `report/team/group_report.md`: **Mục 2.1** (dòng Pitch #4, #5, #6) và toàn bộ **Mục 3 (3.1 Assumption Map, 3.2 Kiểm chứng, 3.3 Research giải pháp đã có)**.
+- File ghi chú phỏng vấn trong `report/assets/`: [report/assets/cp4-interview-snapshot-1.md](report/assets/cp4-interview-snapshot-1.md) và [report/assets/cp4-interview-snapshot-2.md](report/assets/cp4-interview-snapshot-2.md).
 - File báo cáo cá nhân: `report/individual/202603854_NguyenLamTung.md` (hoàn thiện đầy đủ các mục 1 → 7).
 
 **Điều mình học được từ phần nhóm:**

@@ -15,7 +15,7 @@
 | 1 | Nguyễn Tùng Dương| 2A202603850| Leader & Phụ trách CP3-Hội tụ nhóm | nguyenduong43|
 | 2 | Nguyễn Lâm Tùng | 202603854 | Phụ trách CP4 — Kiểm chứng (The Mom Test) & Research | |
 | 3 | Đỗ Duy Tùng | 2A202603844 | Phụ trách CP5 — Quy trình Before/After & Problem Statement v0 | Presceltooo |
-| 4 | | | | |
+| 4 | Nguyễn Ngọc Vinh | 2A202603877 | Phụ trách CP6-Quyết định | cuakicuc4444 |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
@@ -30,8 +30,8 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | CP4 — Research | Nguyễn Lâm Tùng | Đỗ Duy Tùng | Bảng research có link |
 | CP5 — Quy trình trước/sau | Đỗ Duy Tùng | Cả nhóm | Quy trình + bảng before/after |
 | CP5 — Problem Statement v0 | Đỗ Duy Tùng | Cả nhóm | Problem Statement v0 |
-| CP6 — Mức can thiệp + Problem Statement v1 | | | Ma trận, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định | | | 4 rủi ro + Go/Not Yet/No-Go |
+| CP6 — Mức can thiệp + Problem Statement v1 | Nguyễn Ngọc Vinh | Cả nhóm | Ma trận, AI Canvas, eval, Problem Statement v1 |
+| CP6 — Quyết định | Nguyễn Ngọc Vinh | Cả nhóm | 4 rủi ro + Go/Not Yet/No-Go |
 
 ## Cá nhân
 
@@ -119,3 +119,19 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - Hiểu sâu sắc về tầm quan trọng của việc **phân tách ranh giới giữa Rule và AI**: Không phải cái gì cũng ném cho AI làm; khâu kiểm tra tên file hay format heading thì Rule làm vừa nhanh vừa chắc chắn 100%, còn AI chỉ nên can thiệp vào đúng nút thắt nhận thức (đọc hiểu ngữ nghĩa đối chiếu rubric và tìm mâu thuẫn).
 - Nhận ra bài học quan trọng về **Human-in-the-loop**: Tuyệt đối không để AI tự ý rewrite hay sửa đè vào bài của người khác, vì điều đó vừa làm mất tính liêm chính, vừa có nguy cơ gây ảo giác sai lệch ý đồ của người viết. AI chỉ nên là "linter ngữ nghĩa" cảnh báo để con người tự sửa.
+
+---
+
+### NguyenNgocVinh-2A202603877
+**Phần việc phụ trách:**: CP6 — Mức AI, Problem Statement v1 & Quyết định	• Mục 6 (6.1 → 6.4): Ma trận, So sánh 4 mức AI, AI Canvas, 2 câu hỏi PAIR
+• Mục 7: Problem Statement v1 + 3 tiêu chí Eval
+• Mục 8, 9, 10: Bảng 4 rủi ro + Quyết định Go
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+ Phản biện, nêu ý tưởng, thảo luận cùng nhóm để ra ý tưởng cuối cùng, làm phần việc mình phụ trách
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+ +Phần CP6 trong `group_report.md`
+**Điều mình học được từ phần nhóm:**
+ +Lỗi phổ biến nhất khi bắt đầu dự án là nhảy thẳng vào việc nghĩ ra giải pháp phức tạp (như "Xây dựng AI Agent tự động") thay vì tìm hiểu sâu vấn đề thực tế.
+ +Không phải bài toán nào cũng cần AI, và không phải ứng dụng AI nào cũng cần tới Agent phức tạp. Luôn chọn mức độ đơn giản nhất đủ để giải quyết vấn đề.
+ +Trong các tác vụ học thuật và công việc chuyên môn, AI chỉ nên đóng vai trò hỗ trợ (Augment) chứ không nên thay thế hoàn toàn (Automate).
+ +Một quyết định triển khai (Go) không chỉ dựa trên sự thích thú ban đầu mà phải được đánh giá qua 4 rủi ro sản phẩm (Value, Usability, Feasibility, Viability), đồng thời phải có ngưỡng dừng đo lường được.

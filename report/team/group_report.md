@@ -27,9 +27,9 @@
 | 7 | Đỗ Duy Tùng | Khi đến giờ họp daily standup lúc 9h sáng, tôi muốn tổng hợp nhanh commit, ticket Jira và ghi chú hôm qua, để báo cáo trong 2 phút mà không phải lục lọi lịch sử | Kỹ sư phần mềm Agile | Mở 3 công cụ (Git, Jira, Slack) lúc 8h45 để nhớ lại việc hôm qua, mất 15–20' | Viết script regex lấy log Git là xong, sao cần AI? (Thành viên 2) |
 | 8 | Đỗ Duy Tùng | Khi nhận tài liệu đặc tả nghiệp vụ GovTech có nhiều quy định mập mờ, tôi muốn phát hiện sớm các kịch bản ngoại lệ (edge cases) và mâu thuẫn logic, để gửi danh sách câu hỏi làm rõ cho khách hàng | Kỹ sư GovTech / BA | Tự tìm kịch bản ngoại lệ và đối chiếu mâu thuẫn quy định thủ công, mất 105' | Nghiệp vụ nhà nước có tính bảo mật cao, đưa vào AI xử lý có vi phạm chính sách dữ liệu không? (Thành viên 1) |
 | 9 | Đỗ Duy Tùng | Khi đọc tài liệu kỹ thuật API và thư viện AI mới bằng tiếng Anh chuyên ngành, tôi muốn nắm đúng bản chất khái niệm cốt lõi bằng tiếng Việt chuyên môn, để áp dụng vào code mà không phải mất cả buổi tra từ điển | Kỹ sư học AI | Đọc bản dịch thô và thử sai do hiểu nhầm tài liệu kỹ thuật, mất 75' | Google Dịch và Claude/ChatGPT đã dịch được rồi, nhóm định làm gì khác biệt? (Thành viên 4) |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 10 |Vinh |Khi nhận tài liệu/PDF >50 trang cho đồ án, tôi muốn tóm tắt phân tầng để nắm luận điểm chính <10 phút. |Sinh viên đồ án, PM |Đọc chi tiết & ghi chú thủ công tốn 180 phút/file. |Liệu chia nhỏ tài liệu theo MapReduce có làm mất tính mạch lạc giữa các chương không?(Tùng hỏi) |
+| 11 |Vinh |Khi test kernel CUDA, tôi muốn gom log time thành bảng Markdown để làm báo cáo lab. |Dev GPU, Sinh viên |Nhập số liệu & tính Speedup thủ công (20 phút). |Viết script Python/RegEx 5 phút là xong, sao phải dùng AI?(Tùng hỏi) |
+| 12 |Vinh |Khi server web bị panic/error, tôi muốn trích xuất stacktrace để sửa bug ngay mà không cần SSH. |DevOps, Full-stack Dev |Lật tìm file log và grep timestamp (15 phút). |Có quyền truy cập log server production để test thật không?(Dương hỏi) |
 
 ### 2.2. Cluster
 
@@ -282,68 +282,78 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:
+Bài của nhóm nằm ở ô:**Độ mơ hồ cao × Độ phức tạp trung bình**
 
 Vì sao:
-
+- **Độ mơ hồ cao:** Đầu ra là việc phát hiện các điểm mâu thuẫn số liệu, lệch cấu trúc/thuật ngữ giữa các phần nội dung do 4 thành viên viết riêng rẽ. Không có một đáp án cố định về mặt vần câu, nhưng đòi hỏi phải hiểu ngữ cảnh và tính nhất quán logic của toàn bộ bài báo cáo.
+- **Độ phức tạp trung bình:** Quy trình xử lý gồm các bước rõ ràng: Nhận 4 file/đoạn văn bản -> Đọc và trích xuất cấu trúc/số liệu -> Rà soát đối chiếu chéo (Cross-check) -> Chỉ ra các điểm lệch/mâu thuẫn -> Gửi phản hồi cho Nhóm trưởng/Thành viên sửa.
 ### 6.2. So sánh 4 mức
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| **No AI** (sửa quy trình) | Nhóm trưởng dùng Checklist chuẩn + đọc dò thủ công từng phần của 4 thành viên trước khi nộp. | Khi báo cáo ngắn (<5 trang) và các thành viên đã quen làm việc cùng nhau. | Rất tốn thời gian (60–90 phút/lần), nhóm trưởng dễ bị mệt mỏi dẫn đến bỏ sót lỗi mâu thuẫn số liệu. | Không |
+| **Rule** | Viết script Python/Word Macro tự động kiểm tra quy tắc đặt tên file, font chữ, margin, số lượng Heading và từ khóa cố định. | Khi kiểm tra các lỗi định dạng bề mặt (Format / Syntax). | Không thể đọc hiểu ngữ cảnh để phát hiện sự mâu thuẫn số liệu (VD: Đoạn A ghi 15%, đoạn B ghi 25%) hoặc mâu thuẫn thuật ngữ giữa các chương. | Không chọn cho rà soát nội dung (Chỉ dùng Rule cho bước check format) |
+| **Workflow** | Lập trình sẵn luồng xử lý (Pipeline): Nhận văn bản ghép từ 4 phần -> Script chia nhỏ theo mục -> Gọi AI rà soát đối chiếu chêu ngữ cảnh & số liệu giữa các phần -> Xuất bảng tổng hợp các điểm nghi vấn cho Nhóm trưởng duyệt. | Khi các nấc quy trình kiểm tra cố định, AI đóng vai trò đọc hiểu ngữ cảnh và phát hiện bất hợp lý tại nấc đối chiếu. | Nếu prompt thiết kế kém dễ dẫn đến việc AI báo nhầm (False Positive) các đoạn không thực sự mâu thuẫn. | **CHỌN** |
+| **Agent** | AI tự động nhắn tin nhắc nhở thành viên, tự sửa lại nội dung file và tự động gửi bài nộp lên hệ thống. | Khi hệ thống tự vận hành hoàn toàn không cần sự can thiệp của con người. | Phức tạp không cần thiết, vi phạm boundary (con người phải duyệt bài trước khi nộp), nguy cơ AI tự sửa sai ý của thành viên. | Không |
 
-**Mức chọn:**
+**Mức chọn:** **Workflow** (kết hợp Script kiểm tra Rule định dạng + LLM ở bước rà soát đối chiếu ngữ cảnh).
 
 **Vì sao không chọn mức đơn giản hơn:**
+- **No AI** khiến nhóm trưởng tiếp tục bị bottleneck 60-90 phút mỗi đợt nộp bài[cite: 1, 2].
+- **Rule** chỉ check được định dạng bên ngoài, không kiểm tra được tính logic và mâu thuẫn nội dung giữa các phần do nhiều người viết.
+- Việc chọn **Workflow** giúp cố định luồng kiểm tra (bằng code Python), dùng AI đúng ở bước rà soát ngữ cảnh, vừa tiết kiệm chi phí vừa giữ đúng ranh giới nhóm trưởng là người quyết định cuối cùng.
 
 ### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| **Prediction** — AI dự đoán / tạo ra gì? | Danh sách cảnh báo các vị trí bị lệch cấu trúc, mâu thuẫn số liệu hoặc lệch thuật ngữ giữa các phần bài nộp. |
+| **Judgment** — con người cân nhắc, quyết định gì? | Nhóm trưởng và các thành viên xem xét danh sách cảnh báo, đánh giá xem đó có phải lỗi thật không để sửa bài trước khi merge. |
+| **Action** — hành động cuối cùng là gì, ai làm? | Thành viên chỉnh sửa lại đoạn văn bị lệch/sai số liệu; Nhóm trưởng duyệt bản cuối và nộp bài. |
+| **Outcome** — đo kết quả bằng gì? | - Thời gian nối và duyệt bài của nhóm trưởng giảm từ 90 phút xuống < 20 phút[cite: 1, 2].<br>- Số lượng tin nhắn sửa lỗi lệch format/thuật ngữ sau khi ghép bài giảm 80%. |
+| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Nội dung văn bản/file báo cáo của 4 thành viên + Bảng Rubric/Cấu trúc chuẩn của môn học. Có sẵn trước giờ nộp bài. |
+| **Feedback** — lấy phản hồi ở đâu để cải thiện? | Phản hồi của Nhóm trưởng về các cảnh báo đúng/sai của AI (dùng để refine lại prompt kiểm tra đối chiếu). |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
 - Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
+ -**Hỗ trợ (Augment):** Nhóm trưởng và các thành viên muốn AI chỉ ra chính xác điểm mâu thuẫn để họ tự chỉnh sửa. Phỏng vấn thực tế cho thấy nhóm KHÔNG muốn AI tự động viết/sửa lại bài vì dễ làm sai lệch ý đồ học thuật của từng cá nhân.
 - AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
-
+ - **Bỏ sót (Bỏ sót mâu thuẫn số liệu) tệ hơn:** Nếu AI bỏ sót lỗi mâu thuẫn số liệu giữa các chương, bài nộp vẫn bị trừ điểm oan khi giảng viên chấm bài.
+  - **Thiết kế xử lý:** 
+    1. Yêu cầu AI quét 2 lượt (Lượt 1: Check cấu trúc heading; Lượt 2: Extract toàn bộ số liệu/khái niệm chính để so sánh chéo).
+    2. Cài đặt chế độ cảnh báo nhạy (High Sensitivity): Thà báo nhầm để nhóm trưởng liếc qua 5 giây còn hơn bỏ sót mâu thuẫn thật.
 ---
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Nhóm trưởng và các thành viên trong nhóm đồ án/báo cáo (4–5 người). |
+| **Quy trình** | Thu thập 4 phần bài viết -> Chạy Script tách mục -> Gọi AI rà soát đối chiếu chéo (Cross-check) -> Xuất bảng cảnh báo lệch cấu trúc/số liệu -> Thành viên sửa bài -> Nhóm trưởng nộp bài. |
+| **Bottleneck** | Bước đọc nối bài và phát hiện mâu thuẫn thủ công của nhóm trưởng (mất 60–90 phút/lần nộp)[cite: 1, 2]. |
+| **Impact** | Tốn 60-90 phút đọc nối bài sát deadline 23h59; nảy sinh tranh cãi (>15 tin nhắn/lần); bài bị trừ điểm vì lệch format hoặc mâu thuẫn số liệu. |
+| **Success Metric** | (1) Thời gian rà soát & ghép bài giảm từ 90 phút xuống < 20 phút[cite: 1, 2].<br>(2) Phát hiện 100% các điểm mâu thuẫn số liệu trực tiếp giữa các chương.<br>(3) Số tin nhắn sửa lỗi sau ghép bài giảm > 80%. |
+| **Boundary** | AI không được tự ý sửa nội dung file bài làm; AI không tự bấm nộp bài; Nhóm trưởng và thành viên bắt buộc phải kiểm duyệt cảnh báo (Human-in-the-loop). |
+| **AI intervention point** | Tại nấc rà soát và đối chiếu chéo ngữ cảnh/số liệu giữa các phần văn bản được dán vào. |
+| **Mức chọn** | **Workflow** |
+| **Rủi ro & người kiểm tra** | Rủi ro AI báo nhầm các đoạn không thực sự mâu thuẫn -> Nhóm trưởng dành 5–10 phút đọc lại danh sách cảnh báo để xác nhận trước khi gửi thành viên sửa. |
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| Success Metric | Chỉ đo thời gian duyệt bài (giảm từ 90' xuống 20')[cite: 1, 2] | Bổ sung metric tỉ lệ phát hiện lỗi mâu thuẫn (100%) và giảm số tin nhắn tranh cãi | Phản biện nhận được: Duyệt nhanh nhưng vẫn để lọt lỗi mâu thuẫn số liệu thì bài nộp vẫn bị trừ điểm. |
+| AI Intervention Point | Chưa rõ vị trí | Xác định tại nấc Rà soát đối chiếu chéo (Cross-checking node) | Giúp việc lập trình luồng Workflow rõ ràng hơn. |
 
 **Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | **Phát hiện đúng mâu thuẫn số liệu** | Chỉ ra đúng các cặp số liệu mâu thuẫn giữa các phần (VD: Chương 1 ghi 100 mẫu, Chương 3 ghi 150 mẫu). | Bỏ qua các số liệu đá nhau trực tiếp giữa các phần bài nộp. |
+| 2 | **Cảnh báo lệch cấu trúc/thuật ngữ** | Liệt kê rõ các mục bị thiếu so với Rubric hoặc các thuật ngữ dùng không nhất quán (VD: chỗ dùng "User", chỗ dùng "Khách hàng"). | Không phát hiện ra phần bài viết bị thiếu mục bắt buộc. |
+| 3 | **Trích xuất đúng vị trí (Dẫn chứng)** | Mỗi cảnh báo đều ghi rõ: [Phần của ai] - [Đoạn nào] - [Lỗi gì]. | Cảnh báo chung chung không chỉ rõ vị trí cần sửa trong bài. |
+| 4 | **Format báo cáo kiểm tra dễ đọc** | Xuất dạng bảng danh sách gọn gàng, đọc và nắm bắt dưới 3 phút. | Trả về văn bản dài dòng, khó theo dõi. |
 
 ---
 
@@ -353,31 +363,38 @@ Vì sao:
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **Thấp** | 100% nhóm trưởng được hỏi đều thừa nhận việc đọc nối bài và sửa lỗi lệch format/mâu thuẫn trước giờ nộp là trải nghiệm rất căng thẳng. |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | **Thấp** | Đầu ra là bảng danh sách các điểm cần sửa rất trực quan, thành viên chỉ cần nhìn vào để chỉnh lại phần mình viết. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **Thấp** | Việc gửi các đoạn văn bản vào Prompt LLM để đối chiếu ngữ cảnh là kỹ năng nằm trong khả năng lập trình Python/API cơ bản của nhóm. |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | **Thấp** | Dung lượng bài báo cáo nhóm (10-20 trang) nằm trong giới hạn context window của các model API miễn phí/giá rẻ (như Gemini Flash), chi phí gần như bằng 0. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
-
-**Lý do:**
+**Quyết định:** Go 
+**Lý do:**Không có rủi ro nào ở mức **Cao** hay **Trung bình**. Bài toán giải quyết đúng pain point thực tế của sinh viên khi làm bài tập nhóm[cite: 1, 2], chi phí thấp, tính feasibility cao và rất dễ triển khai pilot thử nghiệm.**
 
 **Nếu Go — pilot nhỏ nhất:**
-
+- Tạo một file Prompt chuẩn (Template Prompt Cross-check) hoặc viết script Python đơn giản nhận input là file Docs/Markdown ghép từ 4 thành viên.
+- Chạy thử nghiệm rà soát với 2 bài lab/báo cáo nhóm tiếp theo của chính nhóm mình.
+- Đo thời gian nhóm trưởng dùng để rà soát bài và số lỗi mâu thuẫn/lệch cấu trúc bắt được.
 **Nếu Not Yet — cần kiểm chứng gì trước:**
 
 **Nếu No-Go — nên làm gì thay AI:**
 
 **Ngưỡng dừng** (nếu sau … mà … thì quay về …):
-
+- Nếu sau 2 lần thử nghiệm, AI bị bỏ sót quá **20%** các lỗi mâu thuẫn số liệu thực tế -> Dừng pilot, quay về phương án **No AI** (Dùng checklist thủ công + nhóm trưởng phân công 1 thành viên khác đọc chéo).
+- Nếu việc đối chiếu của AI tạo ra quá nhiều cảnh báo giả (False Positive > 50%) khiến nhóm trưởng tốn thêm thời gian lọc -> Dừng pilot để tinh chỉnh lại Prompt template.
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+- Hiện tại quy trình tập trung rà soát các bài báo cáo dạng văn bản (Text/Markdown/Docs). Với các bài đồ án có kèm source code hoặc file Excel số liệu phức tạp, cần mở rộng nấc parser trước khi gửi cho AI đối chiếu.
+- Hướng tiếp theo: Đóng gói công cụ thành một bot Telegram/Discord nhóm hoặc Extension hỗ trợ kiểm tra trực tiếp trên Google Docs.
 
 ## 10. Tài liệu tham khảo
 
--
+1. Teresa Torres, *Continuous Discovery Habits*, Product Discovery Group, 2021.
+2. Rob Fitzpatrick, *The Mom Test*, 2013.
+3. Jeff Gothelf & Josh Seiden, *Lean UX*, O'Reilly Media, 2021.
+4. Google PAIR (People + AI Research), *People + AI Guidebook*, https://pair.withgoogle.com/
+5. Anthropic, *Building Effective Agents*, https://www.anthropic.com/research/building-effective-agents

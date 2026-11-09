@@ -5,10 +5,10 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: Nhom456
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
-- Quyết định cuối: Go / Not Yet / No-Go
+- Candidate problem được chọn (1 câu): Khi ghép các phần báo cáo từ 4 thành viên vào tối trước deadline, nhóm trưởng muốn phát hiện ngay các mục còn thiếu theo rubric/quy tắc repo và các chỗ mâu thuẫn số liệu/logic giữa các phần, để kịp yêu cầu sửa và nộp bài đúng hạn mà không bị trừ điểm.
+- Quyết định cuối: Go
 
 ---
 
@@ -18,9 +18,9 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
+| 1 | Nguyễn Tùng Dương | Khi ghép các phần báo cáo từ 4 thành viên vào tối trước deadline, tôi muốn phát hiện ngay các mục còn thiếu theo rubric và các chỗ mâu thuẫn số liệu/logic giữa các phần, để kịp sửa và nộp bài đúng hạn mà không bị trừ điểm | Nhóm trưởng / người phụ trách tổng hợp và review bài nộp cuối (nhóm 3–5 sinh viên) | Bước 4: Đọc chéo toàn bộ bài dài để đối chiếu rubric và tìm mâu thuẫn giữa các thành viên (35–40 phút/lần) | "Nếu chỉ dùng template cố định + checklist bắt buộc trước khi gửi bài (No AI) thì đã giảm được một nửa thời gian review chưa, hay bottleneck thật nằm ở việc nhóm không chốt số liệu chung từ đầu?" (Tùng) |
+| 2 | Nguyễn Tùng Dương | Khi gặp lỗi hoặc thắc mắc về yêu cầu bài lab trong lúc làm bài, tôi muốn tìm lại ngay câu trả lời chính thức mà giảng viên/TA đã giải đáp trước đó trong kênh chat lớp, để xử lý tiếp ngay mà không phải cuộn đọc hàng trăm tin nhắn | Sinh viên trong lớp học phần (40–60 người) và TA | Bước 3 & 4: Tìm theo keyword và cuộn đọc lọc qua hàng chục tin nhắn thảo luận rời rạc để biết đâu là câu chốt của TA (10–15 phút/lần) | "Nếu lớp chỉ cần lập 1 file Google Docs FAQ hoặc ghim tin nhắn thì có giải quyết được 80% không? Và lấy dữ liệu từ Zalo cá nhân bằng cách nào?" (Vinh) |
+| 3 | Nguyễn Tùng Dương | Khi bắt đầu ôn tập cho kỳ thi từ 10–12 slide bài giảng và PDF đọc thêm, tôi muốn gom các khái niệm cốt lõi và câu hỏi trọng tâm theo chủ đề về một chỗ, để bắt đầu ôn luyện ngay thay vì mất cả buổi mở từng file dò lại | Sinh viên đại học chuẩn bị ôn thi giữa kỳ / cuối kỳ | Bước 2, 3 & 4: Đọc dò từng slide, copy-paste và gom nhóm khái niệm trùng lặp từ nhiều bài giảng (150–180 phút/môn) | "Việc này chỉ diễn ra 1–2 lần/học kỳ lúc thi nên khó đo lường lặp lại hằng tuần trong buổi lab, và hiện tại NotebookLM đã làm sẵn việc này chưa?" (Vinh) |
 | 4 | Nguyễn Lâm Tùng | Khi ghép code/báo cáo từ 4 thành viên vào tối trước ngày nộp, nhóm trưởng muốn biết ngay phần nào viết lệch cấu trúc hoặc mâu thuẫn số liệu với phần khác, để kịp yêu cầu sửa trước khi merge | Nhóm trưởng, các thành viên nhóm (4 người) | Đọc dò chéo để phát hiện mâu thuẫn số liệu, logic và thuật ngữ giữa 4 phần viết độc lập (35 phút) | *"Nếu nhóm chia sẵn khung heading trong file template từ đầu buổi thì có còn mất 80 phút ghép bài nữa không, hay chủ yếu mất giờ ở chỗ khác?"* (Dương hỏi) |
 | 5 | Nguyễn Lâm Tùng | Khi chuẩn bị nộp bài lab/báo cáo nhóm trước deadline 23h59, tôi muốn đối chiếu nhanh bài làm với toàn bộ rubric và quy tắc đặt tên file, để không bị trừ điểm oan vì thiếu mục nhỏ | Sinh viên, nhóm trưởng chuẩn bị nộp bài | Dò thủ công từng điều kiện đạt/trừ điểm trong `RUBRIC.md` và `SUBMISSION.md` đối chiếu với bài làm (15 phút) | *"Phần kiểm tra tên file và số dòng này chỉ cần lập Checklist hoặc chạy script/linter (Rule) là đủ, có thực sự cần tới AI không?"* (Thành viên 3 hỏi) |
 | 6 | Nguyễn Lâm Tùng | Khi giảng viên hoặc TA giải đáp thắc mắc rải rác trong Zalo/Discord lớp suốt nhiều tuần, tôi muốn tìm lại ngay câu trả lời chính thức cho lỗi mình đang gặp, để không mất công hỏi lại hoặc làm sai hướng | Sinh viên trong lớp, Trợ giảng (TA) | Cuộn đọc ngược qua >500 tin nhắn thảo luận để tìm đúng câu chốt của giảng viên/TA (10 phút) | *"Nếu TA hoặc lớp trưởng chỉ cần ghim (Pin) tin nhắn giải đáp vào một file Google Docs FAQ chung (No AI) thì đã giải quyết được 80% vấn đề chưa?"* (Thành viên 4 hỏi) |
@@ -35,40 +35,48 @@
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A — Rà soát & chuẩn hóa bài nộp nhóm | Ghép & kiểm tra tính nhất quán báo cáo nhóm trước deadline (#1), Kiểm tra rubric & quy tắc đặt tên file/thư mục, Review chéo phần viết của các thành viên | Đọc bản nháp do nhiều người viết để đối chiếu với quy định (`README.md`/rubric) và phát hiện thiếu mục, sai format hoặc mâu thuẫn nội dung trước khi nộp |
+| B — Tra cứu & điều phối thông tin nhóm | Tìm lại câu trả lời chính thức của TA trong chat lớp (#2), Rút trích danh sách Action Items & quyết định sau buổi họp nhóm, Theo dõi người phụ trách & deadline | Quyết định quan trọng hoặc đầu việc nằm rải rác trong tin nhắn/ghi chú thô, dễ bị trôi, nhầm lẫn giữa ý đang bàn với ý đã chốt hoặc sót người nhận việc |
+| C — Đọc & tổng hợp tài liệu học thuật dài | Tổng hợp đề cương ôn thi từ 10–12 slide/PDF (#3), Đọc & tóm tắt báo cáo/paper nghiên cứu dài (>50 trang) | Tốn nhiều giờ đọc thủ công và ghi chú từ nhiều nguồn tài liệu dài để rút ra các khái niệm, luận điểm cốt lõi |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian nhóm trưởng tổng hợp và rà soát báo cáo nhóm trước deadline (từ ~80 phút xuống <30 phút/lần nộp) mà vẫn đạt 100% yêu cầu cấu trúc & rubric
+├── Opportunity A: Các quy định nộp bài (cấu trúc thư mục, tên file không dấu, số từ tối thiểu, các trường bắt buộc) nằm rải rác ở nhiều file (README, RUBRIC, SUBMISSION) nên dò tay rất dễ sót
+├── Opportunity B: Mỗi thành viên viết một phần độc lập vào sát giờ nộp nên số liệu, thuật ngữ và kết luận giữa phần trước với phần sau hay bị vênh hoặc mâu thuẫn nhau
+└── Opportunity C: Nhóm trưởng phải đọc chéo toàn bộ báo cáo dài trong trạng thái mệt mỏi lúc 22h–23h đêm nên khó phát hiện các lỗi lệch yêu cầu đề bài (như viết giải pháp vào phần problem)
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- *"Xây dựng phần mềm AI tự động chấm điểm và sửa lại toàn bộ báo cáo nhóm trước khi commit"* (đây là giải pháp cụ thể và vượt quá ranh giới kiểm soát của con người).
+- *"Áp dụng kỹ thuật tóm tắt phân tầng MapReduce cho tài liệu dài"* (chỉ định sẵn thuật toán/công nghệ ngay ở tầng xác định vấn đề).
+- *"Làm chatbot Discord/Zalo tự động nhắc deadline và gom bài"* (nhảy thẳng vào công cụ thay vì mô tả nỗi đau).
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| **Ghép & kiểm tra tính nhất quán/rubric báo cáo nhóm trước khi nộp** (Cluster A) | 5 | 5 | 5 | 5 | 5 | 5 | 5 | **35** |
+| **Rút trích danh sách việc cần làm (Action Items) & quyết định sau buổi họp nhóm** (Cluster B) | 5 | 5 | 4 | 4 | 4 | 4 | 5 | **31** |
+| **Đọc & tóm tắt báo cáo/tài liệu nghiên cứu dài (>50 trang)** (Cluster C) | 4 | 4 | 3 | 3 | 3 | 2 | 4 | **23** |
 
-**Candidate được chọn:**
+**Candidate được chọn:** Ghép và kiểm tra tính nhất quán/rubric của báo cáo nhóm trước khi nộp (#1).
 
 **Vì sao chọn:**
+- Actor rất cụ thể (Nhóm trưởng / người phụ trách ghép và review bài nộp cuối của nhóm 3–5 sinh viên).
+- Quy trình hiện tại có các bước rõ ràng, diễn ra hằng tuần ngay trong các môn học và buổi lab hiện tại, rất dễ kiểm chứng trực tiếp với các nhóm khác trong lớp .
+- Tách bạch cực kỳ rõ ràng giữa phần giải quyết bằng **No AI / Rule** (dùng template, checklist, script kiểm tra cấu trúc thư mục, quy tắc đặt tên file `MSSV_HoTen.md`, số từ tối thiểu) và phần thực sự cần **Workflow có AI** (đọc chéo phát hiện mâu thuẫn số liệu/logic giữa các mục do nhiều người viết và đối chiếu với rubric).
 
 **Vì sao loại các candidate còn lại:**
+- *Rút trích danh sách việc cần làm sau buổi họp nhóm:* Tuy có quy trình và bottleneck rõ, nhưng hiện tại nhiều nền tảng họp (Google Meet, Zoom, Notion AI) đã tích hợp sẵn tính năng tạo transcript và action items khá tốt; ngoài ra với nhóm nhỏ 4 người, chỉ cần áp dụng quy tắc dành 3 phút cuối buổi họp chốt miệng vào bảng mẫu (No AI) đã giải quyết được phần lớn vấn đề.
+- *Đọc & tóm tắt tài liệu nghiên cứu dài (>50 trang):* Cách đặt vấn đề ban đầu của thành viên bị dính lỗi *solution-first* (đưa sẵn kỹ thuật "tóm tắt phân tầng MapReduce" vào Job Story), khó tách bước cho Rule/script, thước đo "giữ nguyên độ chính xác ý chính" khó định lượng trong thời gian ngắn, và hiện tại công cụ như Google NotebookLM đã giải quyết trọn gói.
 
 **Xử lý bất đồng (nếu có):**
+- Ban đầu có thành viên nghiêng về bài toán *Rút trích Action Items sau buổi họp nhóm* vì tần suất họp 3 buổi/tuần. Nhóm đã thảo luận và thống nhất rằng bài toán *Ghép & rà soát báo cáo nhóm trước khi nộp* vừa mang tính cấp thiết ngay trong buổi lab hôm nay, vừa thể hiện rõ nhất tư duy phân tầng **No AI → Rule → Workflow** (không lạm dụng AI cho những bước kiểm tra tên file/cấu trúc có thể dùng Rule), nên cả nhóm đồng thuận 100% chọn bài toán này và đưa ý tưởng Action Items vào mục hướng phát triển tiếp theo.
 
 ---
 

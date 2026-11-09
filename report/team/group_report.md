@@ -88,9 +88,9 @@ Giả định nhóm kiểm chứng trong buổi này: **Giả định #1, #2, #3
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: **Phỏng vấn trực tiếp 2 bạn nhóm trưởng/người ghép bài của 2 nhóm khác trong lớp L3B** (theo đúng 3 luật *The Mom Test*: chỉ hỏi về lần ghép bài gần nhất, mất bao lâu, sót lỗi gì, đang xử lý thế nào; không hỏi câu dẫn dắt) kết hợp đối chiếu log lịch sử commit/chat của nhóm.
+Cách đã dùng: **Phỏng vấn trực tiếp 2 bạn nhóm trưởng/người ghép bài của 2 nhóm khác trong lớp L3B** (theo đúng 3 luật *The Mom Test*: chỉ hỏi về lần ghép bài gần nhất, mất bao lâu, sót lỗi gì, đang xử lý thế nào; không hỏi câu dẫn dắt) kết hợp đối chiếu log lịch sử commit/chat của nhóm. Bản ghi chi tiết từng buổi phỏng vấn được lưu tại [report/assets/cp4-interview-snapshot-1.md](../assets/cp4-interview-snapshot-1.md) và [report/assets/cp4-interview-snapshot-2.md](../assets/cp4-interview-snapshot-2.md).
 
-**Interview Snapshot #1 — Nhóm trưởng Nhóm A (nhóm 4 người, làm phân tán):**
+**Interview Snapshot #1 — Nhóm trưởng Nhóm A ([cp4-interview-snapshot-1.md](../assets/cp4-interview-snapshot-1.md)):**
 
 | Trường | Nội dung |
 |---|---|
@@ -101,7 +101,7 @@ Cách đã dùng: **Phỏng vấn trực tiếp 2 bạn nhóm trưởng/người
 | Mất bao lâu, bao lần? | Mất khoảng **75–85 phút** cho mỗi đợt chốt bài nhóm (1–2 lần/tuần). |
 | Insight / opportunity rút ra | Pain thực sự nằm ở khâu **kiểm tra tính nhất quán chéo (cross-check) về số liệu/logic giữa 4 người viết** (mất ~35') và **rà sót điều kiện nhỏ trong Rubric/Submission** lúc sát giờ. |
 
-**Interview Snapshot #2 — Người ghép bài Nhóm B (nhóm 3 người, ngồi làm chung trực tiếp):**
+**Interview Snapshot #2 — Người ghép bài Nhóm B ([cp4-interview-snapshot-2.md](../assets/cp4-interview-snapshot-2.md)):**
 
 | Trường | Nội dung |
 |---|---|
